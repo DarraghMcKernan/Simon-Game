@@ -10,6 +10,14 @@
 /// </summary>
 #include <SFML/Graphics.hpp>
 
+const sf::Color RED{ 128,0,0,255 };//Sets a constant colour for red that can be used instead of the default red 
+const sf::Color BLUE{ 0,0,128,255 };
+const sf::Color GREEN{ 0,128,0,255 };
+const sf::Color YELLOW{ 128, 128,0,255 };
+
+const sf::Color GREY{ 128,128,128,255 };
+
+
 class Game
 {
 public:
@@ -33,9 +41,9 @@ private:
 	sf::Font m_ArialBlackfont; // font used by message
 	bool m_exitGame; // control exiting game
 	sf::RectangleShape m_redSquare;
-	const sf::Color RED{ 128,0,0,255 };//Sets a constant colour for red that can be used instead of the default red 
-	const sf::Color GREY{ 128,128,128,255 };
-
+	sf::RectangleShape m_blueSquare;
+	sf::RectangleShape m_greenSquare;
+	sf::RectangleShape m_yellowSquare;
 };
 
 #endif // !GAME_HPP

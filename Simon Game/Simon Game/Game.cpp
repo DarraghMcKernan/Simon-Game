@@ -17,6 +17,9 @@
 Game::Game() :
 	m_window{ sf::VideoMode{ 800U, 600U, 32U }, "SFML Game" },
 	m_redSquare(sf::Vector2f(200.0f, 200.0f)),
+	m_blueSquare(sf::Vector2f(200.0f, 200.0f)),
+	m_greenSquare(sf::Vector2f(200.0f, 200.0f)),
+	m_yellowSquare(sf::Vector2f(200.0f, 200.0f)),
 	m_exitGame{false} //when true game will exit
 {
 	squareSetup();
@@ -42,8 +45,8 @@ void Game::run()
 {	
 	sf::Clock clock;
 	sf::Time timeSinceLastUpdate = sf::Time::Zero;
-	const float fps{ 60.0f };
-	sf::Time timePerFrame = sf::seconds(1.0f / fps); // 60 fps
+	const float fps{ 30.0f };
+	sf::Time timePerFrame = sf::seconds(1.0f / fps); // 30 fps
 	while (m_window.isOpen())
 	{
 		processEvents(); // as many as possible
@@ -108,13 +111,22 @@ void Game::update(sf::Time t_deltaTime)
 /// </summary>
 void Game::render()
 {
-	m_window.clear(sf::Color::White);
+	m_window.clear(GREY);
 	m_window.draw(m_redSquare);
+	m_window.draw(m_blueSquare);
+	m_window.draw(m_greenSquare);
+	m_window.draw(m_yellowSquare);
 	m_window.display();
 }
 
 void Game::squareSetup()
 {
-	m_redSquare.setFillColor(sf::Color::Red);
+	m_redSquare.setFillColor(RED);
 	m_redSquare.setPosition(sf::Vector2f(575, 25));
+	m_blueSquare.setFillColor(BLUE);
+	m_blueSquare.setPosition(sf::Vector2f(350, 25));
+	m_greenSquare.setFillColor(GREEN);
+	m_greenSquare.setPosition(sf::Vector2f(575, 250));
+	m_yellowSquare.setFillColor(YELLOW);
+	m_yellowSquare.setPosition(sf::Vector2f(350, 250));
 }
