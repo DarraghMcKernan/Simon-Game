@@ -35,7 +35,7 @@ private:
 	void update(sf::Time t_deltaTime);
 	void render();
 	void squareSetup();
-	
+	void title();
 
 	sf::RenderWindow m_window; // main SFML window
 	sf::Font m_ArialBlackfont; // font used by message
@@ -44,6 +44,7 @@ private:
 	sf::RectangleShape m_blueSquare;
 	sf::RectangleShape m_greenSquare;
 	sf::RectangleShape m_yellowSquare;
+	sf::Text m_titleName;
 };
 
 #endif // !GAME_HPP

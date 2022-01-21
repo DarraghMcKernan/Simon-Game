@@ -23,6 +23,7 @@ Game::Game() :
 	m_exitGame{false} //when true game will exit
 {
 	squareSetup();
+	title();
 }
 
 /// <summary>
@@ -116,6 +117,9 @@ void Game::render()
 	m_window.draw(m_blueSquare);
 	m_window.draw(m_greenSquare);
 	m_window.draw(m_yellowSquare);
+	m_window.draw(m_titleName);
+
+
 	m_window.display();
 }
 
@@ -129,4 +133,19 @@ void Game::squareSetup()
 	m_greenSquare.setPosition(sf::Vector2f(575, 250));
 	m_yellowSquare.setFillColor(YELLOW);
 	m_yellowSquare.setPosition(sf::Vector2f(350, 250));
+}
+
+void Game::title()
+{
+	if (!m_ArialBlackfont.loadFromFile("ASSETS\\FONTS\\ariblk.ttf"))
+	{
+		std::cout << "Problem with Ariel FOnt" << std::endl;
+	}
+	m_titleName.setFont(m_ArialBlackfont);
+	m_titleName.setString("SIMON GAME");
+	m_titleName.setPosition(25.0f, 30.0f);
+	m_titleName.setCharacterSize(40U);
+	m_titleName.setOutlineColor(sf::Color::Black);
+	m_titleName.setFillColor(sf::Color::White);
+	m_titleName.setOutlineThickness(3.0f);
 }
