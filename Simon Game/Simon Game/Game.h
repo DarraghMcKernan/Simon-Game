@@ -26,16 +26,15 @@ private:
 	void processKeys(sf::Event t_event);
 	void update(sf::Time t_deltaTime);
 	void render();
+	void squareSetup();
 	
-	void setupFontAndText();
-	void setupSprite();
 
 	sf::RenderWindow m_window; // main SFML window
 	sf::Font m_ArialBlackfont; // font used by message
-	sf::Text m_welcomeMessage; // text used for message on screen
-	sf::Texture m_logoTexture; // texture used for sfml logo
-	sf::Sprite m_logoSprite; // sprite used for sfml logo
 	bool m_exitGame; // control exiting game
+	sf::RectangleShape m_redSquare;
+	const sf::Color RED{ 128,0,0,255 };//Sets a constant colour for red that can be used instead of the default red 
+	const sf::Color GREY{ 128,128,128,255 };
 
 };
 
