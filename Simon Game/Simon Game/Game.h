@@ -44,7 +44,14 @@ private:
 	sf::RectangleShape m_blueSquare;
 	sf::RectangleShape m_greenSquare;
 	sf::RectangleShape m_yellowSquare;
-	sf::Text m_titleName;
+	sf::Text m_titleName;//title text
+
+	sf::Text m_greenEasy;
+	sf::Text m_yellowMedium;
+	sf::Text m_redHard;
+	sf::Text m_blueExit;
+	sf::Text m_statusText;
+
 };
 
 #endif // !GAME_HPP
