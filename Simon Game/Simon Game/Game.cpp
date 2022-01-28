@@ -155,25 +155,25 @@ void Game::title()
 	m_titleName.setOutlineThickness(3.0f);
 
 	m_greenEasy.setFont(m_ArialBlackfont);
-	m_greenEasy.setFillColor(GREEN);
+	m_greenEasy.setFillColor(BRIGHT_GREEN);
 	m_greenEasy.setCharacterSize(32);
 	m_greenEasy.setPosition(25, 85);
 	m_greenEasy.setString("Press green for \nan easy game");
 
 	m_yellowMedium.setFont(m_ArialBlackfont);
-	m_yellowMedium.setFillColor(YELLOW);
+	m_yellowMedium.setFillColor(BRIGHT_YELLOW);
 	m_yellowMedium.setCharacterSize(32);
 	m_yellowMedium.setPosition(25, 185);
 	m_yellowMedium.setString("Press yellow for \na medium game");
 
 	m_redHard.setFont(m_ArialBlackfont);
-	m_redHard.setFillColor(RED);
+	m_redHard.setFillColor(BRIGHT_RED);
 	m_redHard.setCharacterSize(32);
 	m_redHard.setPosition(25, 285);
 	m_redHard.setString("Press red for \na hard game");
 
 	m_blueExit.setFont(m_ArialBlackfont);
-	m_blueExit.setFillColor(BLUE);
+	m_blueExit.setFillColor(BRIGHT_BLUE);
 	m_blueExit.setCharacterSize(32);
 	m_blueExit.setPosition(25, 385);
 	m_blueExit.setString("Press blue to exit");

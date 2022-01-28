@@ -15,6 +15,11 @@ const sf::Color BLUE{ 0,0,128,255 };
 const sf::Color GREEN{ 0,128,0,255 };
 const sf::Color YELLOW{ 128, 128,0,255 };
 
+const sf::Color BRIGHT_RED{ 255, 0,0,255 };
+const sf::Color BRIGHT_BLUE{ 0, 0,255,255 };
+const sf::Color BRIGHT_GREEN{ 0, 255,0,255 };
+const sf::Color BRIGHT_YELLOW{ 255, 255,0,255 };
+
 const sf::Color GREY{ 128,128,128,255 };
 
 
